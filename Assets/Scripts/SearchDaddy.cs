@@ -52,6 +52,12 @@ public class SearchDaddy : MonoBehaviour
         slotButtons.SetActive(false);
     }
 
+    public void returnToSelect()
+    {
+        slotButtons.SetActive(true);
+        selectSignUI.SetActive(false);
+    }
+
     //Selecting Sign for certain Slot
     public void SetSign(string signName)
     {
@@ -195,7 +201,7 @@ public class SearchDaddy : MonoBehaviour
             return;
         }
 
-        if(wF == true && dB == true && fC == true && cW == true)
+        if(wF == true && dB == true && fC == true && lT == true)
         {
             Debug.Log("Curse h1");
             for (int i = 0; i < 7; i++)
