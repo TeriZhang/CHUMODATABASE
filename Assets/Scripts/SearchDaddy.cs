@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SearchDaddy : MonoBehaviour
 {
@@ -140,12 +141,18 @@ public class SearchDaddy : MonoBehaviour
                 wF = true;
                 
             }
+            if (string.IsNullOrEmpty(slots[i]))
+            {
+                Debug.Log("123321");
+                nN = true;
+
+            }
             else
             {
                 //nN = true;
             }
         }
-        if(fC == true && hS == true && cW == true)
+        if(fC == true && hS == true && cW == true && nN == true)
         {
             Debug.Log("Curse e1");
             for (int i = 0; i < 7; i++)
@@ -153,10 +160,12 @@ public class SearchDaddy : MonoBehaviour
                 curses[i].SetActive(false);
             }
             curses[0].SetActive(true);
+            curses[0].GetComponent<CurseController>().reloadPage();
+            this.gameObject.SetActive(false);
             return;
         }
 
-        if (gG == true && rB == true && cW == true)
+        if (gG == true && rB == true && cW == true && nN == true)
         {
             Debug.Log("Curse e2");
             for (int i = 0; i < 7; i++)
@@ -164,10 +173,12 @@ public class SearchDaddy : MonoBehaviour
                 curses[i].SetActive(false);
             }
             curses[1].SetActive(true);
+            curses[1].GetComponent<CurseController>().reloadPage();
+            this.gameObject.SetActive(false);
             return;
         }
 
-        if (wF == true && lT == true && hS == true)
+        if (wF == true && lT == true && hS == true && nN == true)
         {
             Debug.Log("Curse e3");
             for (int i = 0; i < 7; i++)
@@ -175,6 +186,8 @@ public class SearchDaddy : MonoBehaviour
                 curses[i].SetActive(false);
             }
             curses[2].SetActive(true);
+            curses[2].GetComponent<CurseController>().reloadPage();
+            this.gameObject.SetActive(false);
             return;
         }
 
@@ -187,10 +200,12 @@ public class SearchDaddy : MonoBehaviour
                 curses[i].SetActive(false);
             }
             curses[3].SetActive(true);
+            curses[3].GetComponent<CurseController>().reloadPage();
+            this.gameObject.SetActive(false);
             return;
         }
 
-        if(fP == true && dB == true && sA == true)
+        if(fP == true && dB == true && sA == true && nN == true)
         {
             Debug.Log("Curse m2");
             for (int i = 0; i < 7; i++)
@@ -198,6 +213,8 @@ public class SearchDaddy : MonoBehaviour
                 curses[i].SetActive(false);
             }
             curses[4].SetActive(true);
+            curses[4].GetComponent<CurseController>().reloadPage();
+            this.gameObject.SetActive(false);
             return;
         }
 
@@ -209,18 +226,25 @@ public class SearchDaddy : MonoBehaviour
                 curses[i].SetActive(false);
             }
             curses[5].SetActive(true);
+            curses[5].GetComponent<CurseController>().reloadPage();
+            this.gameObject.SetActive(false);
             return;
         }
 
         else
         {
             Debug.Log("404");
-            Debug.Log("Curse e1");
             for (int i = 0; i < 7; i++)
             {
                 curses[i].SetActive(false);
             }
             curses[6].SetActive(true);
+            this.gameObject.SetActive(false);
         }
+    }
+
+    public void clear()
+    {
+        SceneManager.LoadScene(0);
     }
 }

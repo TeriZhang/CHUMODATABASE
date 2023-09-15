@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CurseController : MonoBehaviour
 {
@@ -8,20 +9,34 @@ public class CurseController : MonoBehaviour
     public GameObject solutionPage;
     public GameObject mainPage,drumPage,taliPage,relicPage;
     public bool is404;
+
+    public GameObject solutionButton;
+    public float solutionTimer;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    private void Awake()
+    {
+        solutionTimer = 0;
+        solutionButton.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        solutionTimer += Time.deltaTime;
+        if(solutionTimer >= 2)
+        {
+            solutionButton.SetActive(true);
+        }
     }
 
     public void returnToMain()
     {
+        SceneManager.LoadScene(0);
         mainPage.SetActive(true);
         this.gameObject.SetActive(false);
     }
@@ -64,5 +79,11 @@ public class CurseController : MonoBehaviour
         taliPage.SetActive(false);
         relicPage.SetActive(true);
         drumPage.SetActive(false);
+    }
+
+    public void reloadPage()
+    {
+        solutionHome.SetActive(true);
+        solutionPage.SetActive(false);
     }
 }
