@@ -161,24 +161,26 @@ public class SearchDaddy : MonoBehaviour
             }
             curses[0].SetActive(true);
             curses[0].GetComponent<CurseController>().reloadPage();
+            curses[0].GetComponent<CurseController>().ViewSolution();
             this.gameObject.SetActive(false);
             return;
         }
 
-        if (gG == true && rB == true && cW == true && nN == true)
-        {
-            Debug.Log("Curse e2");
-            for (int i = 0; i < 7; i++)
-            {
-                curses[i].SetActive(false);
-            }
-            curses[1].SetActive(true);
-            curses[1].GetComponent<CurseController>().reloadPage();
-            this.gameObject.SetActive(false);
-            return;
-        }
+        //if (gG == true && rB == true && cW == true && nN == true)
+        //{
+        //    Debug.Log("Curse e2");
+        //    for (int i = 0; i < 7; i++)
+        //    {
+        //        curses[i].SetActive(false);
+        //    }
+        //    curses[1].SetActive(true);
+        //    curses[1].GetComponent<CurseController>().reloadPage();
+        //    curses[1].GetComponent<CurseController>().ViewSolution();
+        //    this.gameObject.SetActive(false);
+        //    return;
+        //}
 
-        if (wF == true && lT == true && hS == true && nN == true)
+        if (wF == true && lT == true && sA == true && nN == true)
         {
             Debug.Log("Curse e3");
             for (int i = 0; i < 7; i++)
@@ -187,25 +189,27 @@ public class SearchDaddy : MonoBehaviour
             }
             curses[2].SetActive(true);
             curses[2].GetComponent<CurseController>().reloadPage();
+            curses[2].GetComponent<CurseController>().ViewSolution();
             this.gameObject.SetActive(false);
             return;
         }
 
-        if(gG == true && sA == true && rB == true && fP == true)
-        {
-            Debug.Log("Curse m1");
-            Debug.Log("Curse e3");
-            for (int i = 0; i < 7; i++)
-            {
-                curses[i].SetActive(false);
-            }
-            curses[3].SetActive(true);
-            curses[3].GetComponent<CurseController>().reloadPage();
-            this.gameObject.SetActive(false);
-            return;
-        }
+        //if(gG == true && sA == true && rB == true && fP == true)
+        //{
+        //    Debug.Log("Curse m1");
+        //    Debug.Log("Curse e3");
+        //    for (int i = 0; i < 7; i++)
+        //    {
+        //        curses[i].SetActive(false);
+        //    }
+        //    curses[3].SetActive(true);
+        //    curses[3].GetComponent<CurseController>().reloadPage();
+        //    curses[3].GetComponent<CurseController>().ViewSolution();
+        //    this.gameObject.SetActive(false);
+        //    return;
+        //}
 
-        if(fP == true && dB == true && sA == true && nN == true)
+        if(gG == true && dB == true && rB == true && fC == true)
         {
             Debug.Log("Curse m2");
             for (int i = 0; i < 7; i++)
@@ -214,22 +218,24 @@ public class SearchDaddy : MonoBehaviour
             }
             curses[4].SetActive(true);
             curses[4].GetComponent<CurseController>().reloadPage();
+            curses[4].GetComponent<CurseController>().ViewSolution();
             this.gameObject.SetActive(false);
             return;
         }
 
-        if(wF == true && dB == true && fC == true && lT == true)
-        {
-            Debug.Log("Curse h1");
-            for (int i = 0; i < 7; i++)
-            {
-                curses[i].SetActive(false);
-            }
-            curses[5].SetActive(true);
-            curses[5].GetComponent<CurseController>().reloadPage();
-            this.gameObject.SetActive(false);
-            return;
-        }
+        //if(wF == true && dB == true && fC == true && lT == true)
+        //{
+        //    Debug.Log("Curse h1");
+        //    for (int i = 0; i < 7; i++)
+        //    {
+        //        curses[i].SetActive(false);
+        //    }
+        //    curses[5].SetActive(true);
+        //    curses[5].GetComponent<CurseController>().reloadPage();
+        //    curses[5].GetComponent<CurseController>().ViewSolution();
+        //    this.gameObject.SetActive(false);
+        //    return;
+        //}
 
         else
         {
